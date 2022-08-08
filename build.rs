@@ -215,13 +215,6 @@ fn build_v8() {
 }
 
 fn print_gn_args(gn_out_dir: &Path) {
-  assert!(Command::new(gn())
-    .arg("args")
-    .arg(&gn_out_dir)
-    .arg("--list")
-    .status()
-    .unwrap()
-    .success());
 }
 
 fn maybe_clone_repo(dest: &str, repo: &str) {
